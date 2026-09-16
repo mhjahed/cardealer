@@ -1,165 +1,106 @@
-🚗 Car Dealer Web Project
+<!-- CAR DEALER WEB · crimson #ef4444 on #0d1117 · widgets verified 2026-09-12 -->
 
-A modern, responsive, and feature-rich web application for managing car listings, users, and dealerships. Built with Django, HTML, CSS, and JavaScript.
+<div align="center">
 
-🌟 Features
+<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:0d1117,100:ef4444&height=190&section=header&text=CAR%20DEALER&fontSize=62&fontColor=ffffff&animation=fadeIn&fontAlignY=36&desc=listings%20%C2%B7%20roles%20%C2%B7%20search%20%C2%B7%20rich%20pages%20%E2%80%94%20django&descSize=17&descAlignY=60" alt="Car Dealer" />
 
-User Authentication & Authorization
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=19&duration=2600&pause=900&color=F87171&center=true&vCenter=true&width=760&height=95&lines=admin+%C2%B7+dealer+%C2%B7+customer+roles;listings+%C2%B7+brand%2Fprice%2Ftype+filtering;ckeditor+pages+%C2%B7+postgres-ready" alt="typing" />
 
-Sign up, login, logout functionality
+<p>
+  <img src="https://img.shields.io/badge/django-backend-0d1117?style=for-the-badge&logo=django&logoColor=44b78b" alt="django" />
+  <img src="https://img.shields.io/badge/allauth-auth-0d1117?style=for-the-badge&logo=django&logoColor=ef4444" alt="allauth" />
+  <img src="https://img.shields.io/badge/ckeditor-rich%20text-ef4444?style=for-the-badge&logo=ckeditor&logoColor=white" alt="ckeditor" />
+  <img src="https://img.shields.io/badge/postgresql-prod-0d1117?style=for-the-badge&logo=postgresql&logoColor=336791" alt="postgres" />
+  <img src="https://img.shields.io/badge/license-MIT-0d1117?style=for-the-badge&logoColor=f87171" alt="license" />
+</p>
 
-User roles: Admin, Dealer, Customer
+</div>
 
-Car Listings Management
+<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:0d1117,50:ef4444,100:0d1117&height=3" alt="" />
 
-Add, edit, delete cars (Admin & Dealer)
+## ▍$ cat listing.full
 
-Search and filter by brand, model, price, and type
+A modern, responsive dealership platform: three permission tiers, full listings
+management, real-time search and filtering, and rich-text detail pages — wired
+for production with Whitenoise static handling and a PostgreSQL-ready backend.
 
-Detailed car view page with images and specifications
+```yaml
+roles   : admin (everything) · dealer (own inventory) · customer (browse/search)
+search  : dynamic — filter by brand · model · price band · body type
+content : ckeditor-powered rich descriptions per vehicle
+db      : sqlite (dev) · postgresql (prod) via django orm
+deploy  : whitenoise · production settings · heroku-ready
+```
 
-Responsive Design
+<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:0d1117,50:ef4444,100:0d1117&height=3" alt="" />
 
-Fully responsive UI with HTML, CSS, and JavaScript
+## ▍$ ls features/
 
-Mobile-first approach for seamless browsing
+▸ **auth & roles** — signup / login / logout with admin, dealer, customer scopes
+▸ **listings management** — add, edit, delete vehicles (admin & dealer)
+▸ **search & filtering** — brand, model, price, type — dynamic, client-side reactive
+▸ **detail pages** — image galleries + full specifications + ckeditor content
+▸ **responsive ui** — mobile-first; seamless from phone to showroom screen
+▸ **production config** — static files, security posture, deploy docs
 
-Rich Text Editor
+<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:0d1117,50:ef4444,100:0d1117&height=3" alt="" />
 
-Integrated CKEditor for detailed car descriptions
+## ▍$ cat stack.json
 
-Real-time Features
+<div align="center">
+  <img src="https://skillicons.dev/icons?i=django,py,postgres,sqlite,bootstrap,js,html,css&perline=9" alt="stack" />
+</div>
 
-Dynamic car search and filtering
+<br/>
 
-Client-side interactivity with JS
+| PIECE | TECH |
+|---|---|
+| backend | Python · Django · django-allauth |
+| rich text | django-ckeditor *(upgrade to CKEditor 5 advised for prod)* |
+| fields | django-multiselectfield |
+| assets | django-js-asset · whitenoise |
+| db | sqlite · postgresql (`psycopg2-binary` on windows) |
+| frontend | HTML5 · CSS3 · JavaScript · Bootstrap |
 
-Database Management
+<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:0d1117,50:ef4444,100:0d1117&height=3" alt="" />
 
-PostgreSQL or SQLite for storing user and car data
+## ▍$ ./setup
 
-Django ORM for easy database operations
-
-Deployment Ready
-
-Configured for production deployment
-
-Supports static files management and security best practices
-
-🛠️ Technologies Used
-
-Backend: Python, Django, Django Allauth
-
-Frontend: HTML5, CSS3, JavaScript
-
-Database: SQLite / PostgreSQL
-
-Libraries & Tools:
-
-django-ckeditor for rich text editing
-
-django-multiselectfield for multi-choice fields
-
-django-js-asset for JS asset management
-
-whitenoise for static files handling
-
-Deployment: Heroku / any preferred server
-
-🎨 Screenshots
-
-Home Page
-
-
-Car Listing Page
-
-
-Car Detail Page
-
-
-🚀 Installation
-
-Clone the repository
-
-git clone https://github.com/yourusername/cardealer-web.git
-cd cardealer-web
-
-
-Create & activate virtual environment
-
-python -m venv .venv
-# Windows
-.venv\Scripts\activate
-# macOS/Linux
-source .venv/bin/activate
-
-
-Install dependencies
-
+```bash
+git clone https://github.com/mhjahed/cardealer.git && cd cardealer
+python -m venv .venv && source .venv/bin/activate   # windows: .venv\Scripts\activate
 pip install -r requirements.txt
-
-
-Apply migrations
-
 python manage.py migrate
+python manage.py createsuperuser                    # optional
+python manage.py runserver                          # → http://127.0.0.1:8000
+```
 
+## ▍$ tree .
 
-Create superuser (optional)
-
-python manage.py createsuperuser
-
-
-Run the development server
-
-python manage.py runserver
-
-
-Open in browser
-
-http://127.0.0.1:8000
-
-🌐 Deployment
-
-The project is deployed and accessible online:
-Visit Live Site
-
-Uses Whitenoise for static files handling
-
-Secure production-ready settings configured
-
-🧩 Project Structure
+```
 CarDealerWeb/
-│
-├── cardealer/              # Django app
-│   ├── templates/          # HTML templates
-│   ├── static/             # CSS, JS, images
-│   ├── models.py           # Database models
-│   ├── views.py            # App views
-│   └── urls.py             # App URLs
-│
-├── .venv/                  # Python virtual environment
-├── manage.py               # Django management script
-└── requirements.txt        # Python dependencies
+├── cardealer/        models · views · urls
+│   ├── templates/    html views
+│   └── static/       css · js · images
+├── manage.py
+└── requirements.txt
+```
 
-⚙️ Notes
+<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:0d1117,50:ef4444,100:0d1117&height=3" alt="" />
 
-CKEditor bundled version may have security warnings; consider updating to CKEditor 5 for production.
+## ▍$ grep -i next roadmap.txt
 
-Use psycopg2-binary for PostgreSQL support on Windows.
+- ▸ payment gateway — reserve a car online
+- ▸ real-time customer ↔ dealer chat
+- ▸ recommendation engine (ml-assisted)
+- ▸ email notifications on status changes
 
-📜 License
+<br/>
 
-This project is licensed under the MIT License.
+<div align="center">
 
-💡 Future Improvements
+`built end-to-end by` **[MH JAHED](https://github.com/mhjahed)** · sylhet, bangladesh · `mhjahed@proton.me`
 
-Add payment gateway for online car purchases
+</div>
 
-Implement real-time chat between customers and dealers
-
-Add car recommendation system using AI/ML
-
-Integrate email notifications for users
-
-🙌 Author
-JAHED | https:github.com/mhjahed
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:ef4444,100:0d1117&height=110&section=footer" alt="" />
