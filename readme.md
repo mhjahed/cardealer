@@ -99,7 +99,7 @@ CarDealerWeb/
 
 <div align="center">
 
-`built end-to-end by` **[MH JAHED](https://github.com/mhjahed)** · sylhet, bangladesh · `mhjahed@proton.me`
+`built end-to-end by` **[MH JAHED](https://github.com/mhjahed)** · `mhjahed@proton.me`
 
 </div>
 
